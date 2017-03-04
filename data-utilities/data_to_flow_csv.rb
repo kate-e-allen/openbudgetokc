@@ -25,7 +25,7 @@ expense_csv.each do |row|
   agency_name = row[5]
 
   rollup_key = "#{fund_code}:#{agency_code}"
-  rollup_value = row[-1]
+  rollup_value = row[-1].gsub(',','')
 
   if expense_rollup[rollup_key].nil?
     expense_rollup[rollup_key] = {
@@ -58,7 +58,7 @@ revenue_csv.each do |row|
   category_name = row[3].downcase.titlecase.gsub('"','')
 
   rollup_key = "#{fund_code}:#{category_code}"
-  rollup_value = row[-1]
+  rollup_value = row[-1].gsub(',','')
 
   if revenue_rollup[rollup_key].nil?
     revenue_rollup[rollup_key] = {
