@@ -114,9 +114,9 @@ function data_wrangle(dataset, fy){
         .key(function(d){
             return d.account_category;
         })
-        .sortKeys(function(a,b){
-            return rev_order.indexOf(a) - rev_order.indexOf(b);
-        })
+        //.sortKeys(function(a,b){
+        //    return rev_order.indexOf(a) - rev_order.indexOf(b);
+        //})
         .key(function(d){
             if (d.fund_code == "1") {
                 return "General Fund";
@@ -188,9 +188,9 @@ function data_wrangle(dataset, fy){
             }
             return d.department;
         })
-        .sortKeys(function(a,b){
-            return exp_order.indexOf(a) - exp_order.indexOf(b);
-        })
+        //.sortKeys(function(a,b){
+        //    return exp_order.indexOf(a) - exp_order.indexOf(b);
+        //})
         .key(function(d){
             if (d.fund_code == "1") {
                 return "General Fund";
