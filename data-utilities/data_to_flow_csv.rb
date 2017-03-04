@@ -80,10 +80,10 @@ column_names = ['account_category', 'account_type', 'amount', 'budget_year', 'de
 CSV.open(flow_output, 'w') do |csv|
   csv << column_names
   expense_rollup.each_pair do |key, data|
-    csv << ['','Expense',data[:value], 'FY17', data[:agency_name], data[:fund_code]]
+    csv << [nil,'Expense',data[:value], 'FY17', data[:agency_name], data[:fund_code]]
   end
   revenue_rollup.each_pair do |key, data|
-    csv << [data[:category_name],'Revenue',data[:value], 'FY17', '', data[:fund_code]]
+    csv << [data[:category_name],'Revenue',data[:value], 'FY17', nil, data[:fund_code]]
   end
 end
 
