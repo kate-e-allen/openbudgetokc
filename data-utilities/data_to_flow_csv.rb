@@ -4,7 +4,7 @@ require 'facets/string/titlecase'
 
 expense_file = '../_src/data/fy2017/c4okc_fy2017.csv'
 revenue_file = '../_src/data/fy2017/c4okc_fy2017Revenue.csv'
-flow_output = '../_src/data/fy2017/c4okc_flow.csv'
+flow_output = '../_src/data/flow/FY17__adopted.csv'
 
 #----------------------------------
 # Rollup the expense data
