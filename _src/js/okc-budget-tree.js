@@ -263,6 +263,10 @@
     });
   }
 
+  function updateYear(){
+      console.log("heloo")
+  }
+    
   function updateDefaultSizes(){
     defaults.width = $('#chartContainer').width();
     defaults.height = $('#chartContainer').width() * 6 / 10;
